@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/abstraindo-bootcamp/abstraindo-bootcamp.iml" filepath="$PROJECT_DIR$/abstraindo-bootcamp/abstraindo-bootcamp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/dio-java-bootcamp.iml" filepath="$PROJECT_DIR$/.idea/dio-java-bootcamp.iml" />
-    </modules>
-  </component>
-</project>
