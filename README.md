@@ -1,4 +1,4 @@
-# 🛡️ BootCamp - DIO: Tonnie - Java and AI
+# 🛡️ Bootcamp - DIO: Tonnie - Java and AI
 
 ---
 ## 🔖 Módulos do BootCamp 
