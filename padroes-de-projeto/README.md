@@ -81,3 +81,84 @@ Se estiver em dúvida se deve usar Singleton, pergunte a si mesmo:
 > Se sim, Singleton pode ser uma boa escolha 😉
 
 ---
+
+## 🔁 Padrão de Projeto Strategy
+
+### 📘 O que é o Strategy?
+
+O **Strategy** é um padrão de projeto do tipo **Comportamental**, que permite **definir uma família de algoritmos**, encapsulá-los e torná-los **intercambiáveis** dentro do contexto em que são usados.
+
+Em vez de ter uma lógica fixa e rígida, você pode **trocar o comportamento de um objeto em tempo de execução** — sem precisar alterar o código da classe principal.
+
+---
+
+### 🧠 Quando Usar?
+
+Use o Strategy quando você precisar de:
+
+✅ Vários comportamentos diferentes para uma mesma operação  
+✅ Eliminar estruturas com muitos `if-else` ou `switch`  
+✅ Tornar seu código mais **flexível**, **extensível** e **orientado a interfaces**
+
+Exemplos práticos:
+
+- 💳 Cálculo de frete com diferentes estratégias (Sedex, PAC, Transportadora)
+- 📈 Diferentes formas de ordenar ou buscar dados
+- 🎮 Lógica de comportamento para inimigos em jogos
+
+---
+
+### 💡 Exemplo no Mundo Real
+
+Imagine um aplicativo de pagamentos. Você pode pagar com **cartão de crédito**, **PIX**, **boleto** ou **PayPal**. Cada uma dessas formas de pagamento tem uma lógica diferente, mas o cliente só precisa chamar um método como `pagar()`.
+
+Com o Strategy, cada método de pagamento será uma estratégia separada, podendo ser facilmente trocada e reutilizada.
+
+---
+
+### 🎯 Benefícios
+
+🔄 Permite **alterar o comportamento em tempo de execução**  
+🚫 Elimina cadeias de `if-else`  
+🧱 Segue o **princípio aberto/fechado (OCP)**  
+🧪 Facilita testes unitários (testa cada estratégia isoladamente)
+
+---
+
+### ⚠️ Cuidados ao Usar
+
+⚠️ Pode aumentar o número de classes no projeto  
+⚠️ Pode gerar **complexidade desnecessária** se houver poucas variações  
+⚠️ Exige maior conhecimento de interfaces e polimorfismo
+
+---
+
+### 🛠️ Boas Práticas
+
+- Crie uma **interface comum** para todas as estratégias
+- Mantenha as estratégias **isoladas e reutilizáveis**
+- Use injeção de dependência para facilitar a troca de estratégias
+- Evite usar Strategy se só houver uma implementação (nesse caso, o padrão não agrega valor)
+
+---
+
+### 📌 Resumo Rápido
+
+| Situação                                  | Strategy é indicado? ✅❌ |
+|------------------------------------------|--------------------------|
+| Múltiplos algoritmos intercambiáveis     | ✅                       |
+| Eliminar blocos grandes de `if` ou `switch` | ✅                     |
+| Uma única variação de comportamento      | ❌                       |
+| Lógica fixa que nunca muda               | ❌                       |
+
+---
+
+### 🧪 Dica Extra
+
+Se você perceber que tem muitos `if/else` com base em tipos, pense:
+
+> *"Será que cada bloco desses não poderia ser uma estratégia?"*
+
+Se a resposta for sim, **Strategy pode ajudar muito** a deixar seu código mais limpo e desacoplado! 🚀
+
+---
