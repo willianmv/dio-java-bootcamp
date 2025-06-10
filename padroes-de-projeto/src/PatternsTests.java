@@ -1,3 +1,4 @@
+import facade.Facade;
 import singleton.eager.SingletonEager;
 import singleton.lazy.SingletonLazy;
 import strategy.Robo;
@@ -23,6 +24,7 @@ public class PatternsTests {
         System.out.println(eager);
 
         System.out.println("===========================");
+        System.out.println();
 
         System.out.println("TESTANDO PADRÃO STRATEGY");
 
@@ -39,7 +41,15 @@ public class PatternsTests {
         robo.mover();
 
         robo.setComportamento(comportamentoOfensivo);
-        robo.mover();;
+        robo.mover();
+
+        System.out.println("===========================");
+        System.out.println();
+
+        System.out.println("TESTANDO PADRÃO FACADE");
+        Facade facade = new Facade();
+
+        facade.migrarCliente("Anderson", "1481651165");
 
         System.out.println("===========================");
 

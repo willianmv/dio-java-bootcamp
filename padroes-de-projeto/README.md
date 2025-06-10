@@ -162,3 +162,89 @@ Se você perceber que tem muitos `if/else` com base em tipos, pense:
 Se a resposta for sim, **Strategy pode ajudar muito** a deixar seu código mais limpo e desacoplado! 🚀
 
 ---
+
+## 🧱 Padrão de Projeto Facade
+
+### 📘 O que é o Facade?
+
+O **Facade** é um padrão de projeto do tipo **Estrutural** que tem como objetivo **simplificar o acesso** a sistemas complexos, fornecendo **uma interface unificada** para um conjunto de interfaces mais detalhadas.
+
+Em outras palavras, ele age como uma **fachada** (daí o nome!) que esconde a complexidade dos bastidores e expõe apenas o necessário para o cliente.
+
+---
+
+### 🧠 Quando Usar?
+
+Use o Facade quando você precisar de:
+
+✅ Uma **interface simplificada** para um subsistema complexo  
+✅ **Isolar** as partes internas do sistema do código cliente  
+✅ **Reduzir o acoplamento** entre os módulos de alto e baixo nível
+
+Exemplos práticos:
+
+- 🎬 Sistema de home theater: uma fachada para ligar TV, luz, som e projetor com um único comando
+- 🏦 Operações bancárias: fachada para realizar transferências, verificar saldo, autenticar usuário
+- 📦 APIs complexas: esconder múltiplos serviços por trás de um ponto único de acesso
+
+---
+
+### 💡 Exemplo no Mundo Real
+
+Imagine que você tenha um sistema de home theater. Para assistir a um filme, você precisa:
+
+- Ligar o projetor
+- Ligar o sistema de som
+- Apagar as luzes
+- Selecionar a entrada correta
+
+Com o padrão Facade, você pode encapsular tudo isso em uma única chamada: `homeTheater.iniciarFilme()` — o sistema cuida do resto nos bastidores.
+
+---
+
+### 🎯 Benefícios
+
+✅ Reduz a **complexidade para o cliente**  
+✅ **Organiza melhor** a estrutura do sistema  
+✅ Promove **baixo acoplamento** entre subsistemas  
+✅ Facilita **migrações e manutenções**
+
+---
+
+### ⚠️ Cuidados ao Usar
+
+⚠️ Pode ocultar **funcionalidades importantes** do sistema  
+⚠️ Não substitui o entendimento da lógica interna, apenas **abstrai**  
+⚠️ Pode se tornar **um "Deus" objeto** se for mal projetado
+
+---
+
+### 🛠️ Boas Práticas
+
+- Use o Facade para **esconder complexidade**, mas sem impedir extensões
+- Mantenha o subsistema **modular e testável separadamente**
+- Não coloque **muita lógica na fachada** — ela deve apenas orquestrar chamadas
+- Combine com outros padrões (como Strategy, Factory) para sistemas mais robustos
+
+---
+
+### 📌 Resumo Rápido
+
+| Situação                                   | Facade é indicado? ✅❌ |
+|-------------------------------------------|------------------------|
+| Sistema com muitos subsistemas            | ✅                     |
+| Código cliente chamando muitos métodos    | ✅                     |
+| Sistema simples, com poucos componentes   | ❌                     |
+| Quando a fachada começa a conter lógica demais | ❌                 |
+
+---
+
+### 🧪 Dica Extra
+
+Se você perceber que seu código cliente está chamando **muitos métodos em sequência** para fazer algo simples, pergunte:
+
+> *"Será que posso criar uma **interface única** que faça tudo isso por mim?"*
+
+Se a resposta for sim, o padrão **Facade** pode deixar seu sistema **muito mais limpo e elegante** ✨
+
+---
