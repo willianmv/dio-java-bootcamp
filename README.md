@@ -42,4 +42,12 @@
 
 ---
 
+### 💡 Projeto: Board de Tarefas
+>💎 Escreva um código que irá criar um board customizável para acompanhamento de tarefas, utilizando de JDBC e PostgreSQL e migrations com Flyway
+
+
+- [🔗Detalhes e código do Projeto](./board-de-tarefas/README.md)
+
+---
+
 
