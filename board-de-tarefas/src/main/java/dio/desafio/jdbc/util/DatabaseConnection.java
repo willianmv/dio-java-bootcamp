@@ -6,26 +6,24 @@ import java.sql.SQLException;
 
 public final class DatabaseConnection {
 
-    private static Connection connection;
-
     private DatabaseConnection(){}
 
     public static Connection getConnection(){
-        if(connection == null){
-            try{
-                connection = DriverManager.getConnection(
-                        System.getenv("DB_URL"),
-                        System.getenv("DB_USER"),
-                        System.getenv("DB_PASSWORD")
-                );
-                System.out.println("Conexão com o banco criada com sucesso!");
 
-            }catch (SQLException ex){
-                System.err.println("Erro ao conectar com o banco de dados.");
-                ex.printStackTrace();
-            }
+        try {
+            Connection connection = DriverManager.getConnection(
+                    System.getenv("DB_URL"),
+                    System.getenv("DB_USER"),
+                    System.getenv("DB_PASSWORD")
+            );
+
+            connection.setAutoCommit(false);
+            return connection;
+
+        } catch (SQLException e) {
+            System.err.println("Erro ao estabelecer conexão com o banco");
+            e.printStackTrace();
+            throw new RuntimeException("Não foi possível conectar ao banco de dados", e);
         }
-        return connection;
     }
-
 }
