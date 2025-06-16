@@ -117,4 +117,3 @@ Ao selecionar um board, o sistema deve permitir:
 ![Diagrama: Classes](./images/board-de-tarefas-classes.drawio.png)
 
 ---
-

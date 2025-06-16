@@ -1,12 +1,12 @@
 # 🕹️ Sudoku - Game
 
-> 💡 Este projeto implementa um jogo de Sudoku jogável via menu interativo no console. O jogador poderá iniciar o jogo, inserir e remover números, verificar o status do tabuleiro e finalizar a partida.
+> 💡 Este projeto implementa um jogo de Sudoku jogável via boardMenu interativo no console. O jogador poderá iniciar o jogo, inserir e remover números, verificar o status do tabuleiro e finalizar a partida.
 
 ---
 
 ## 🎮 Menu Interativo
 
->Ao executar o programa, o usuário terá acesso a um menu com as seguintes opções:
+>Ao executar o programa, o usuário terá acesso a um boardMenu com as seguintes opções:
 
 ---
 
