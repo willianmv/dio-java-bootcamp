@@ -14,6 +14,16 @@ public class BoardColumn {
     private List<Card> cards = new ArrayList<>();
     private LocalDateTime createdAt;
 
+    public BoardColumn() {
+    }
+
+    public BoardColumn(Board board, String name, int position, ColumnType columnType) {
+        this.board = board;
+        this.name = name;
+        this.position = position;
+        this.columnType = columnType;
+    }
+
     public long getId() {
         return id;
     }

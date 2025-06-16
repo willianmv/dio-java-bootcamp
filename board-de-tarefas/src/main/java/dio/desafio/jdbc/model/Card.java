@@ -20,7 +20,7 @@ public class Card {
     }
 
     private List<CardBlockHistory> blocks;
-    private List<CardTransition> transitions;
+    private List<CardTransitionHistory> transitions;
     private LocalDateTime createdAt;
 
     public long getId() {
@@ -63,11 +63,11 @@ public class Card {
         this.blocks = blocks;
     }
 
-    public List<CardTransition> getTransitions() {
+    public List<CardTransitionHistory> getTransitions() {
         return transitions;
     }
 
-    public void setTransitions(List<CardTransition> transitions) {
+    public void setTransitions(List<CardTransitionHistory> transitions) {
         this.transitions = transitions;
     }
 

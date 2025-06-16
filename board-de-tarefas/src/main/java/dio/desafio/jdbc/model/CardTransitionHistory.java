@@ -2,7 +2,7 @@ package dio.desafio.jdbc.model;
 
 import java.time.LocalDateTime;
 
-public class CardTransition {
+public class CardTransitionHistory {
 
     private long id;
     private Card card;
